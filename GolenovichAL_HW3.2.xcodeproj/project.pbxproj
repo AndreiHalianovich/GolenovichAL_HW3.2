@@ -11,6 +11,7 @@
 		A8CCF9D1261228F0009EFF71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCF9D0261228F0009EFF71 /* ContentView.swift */; };
 		A8CCF9D3261228F3009EFF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CCF9D2261228F3009EFF71 /* Assets.xcassets */; };
 		A8CCF9D6261228F3009EFF71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CCF9D5261228F3009EFF71 /* Preview Assets.xcassets */; };
+		A8CCF9E526139DCC009EFF71 /* ColoredSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CCF9E426139DCC009EFF71 /* ColoredSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A8CCF9D2261228F3009EFF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8CCF9D5261228F3009EFF71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8CCF9D7261228F3009EFF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8CCF9E426139DCC009EFF71 /* ColoredSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				A8CCF9CE261228F0009EFF71 /* GolenovichAL_HW3_2App.swift */,
 				A8CCF9D0261228F0009EFF71 /* ContentView.swift */,
+				A8CCF9E426139DCC009EFF71 /* ColoredSlider.swift */,
 				A8CCF9D2261228F3009EFF71 /* Assets.xcassets */,
 				A8CCF9D7261228F3009EFF71 /* Info.plist */,
 				A8CCF9D4261228F3009EFF71 /* Preview Content */,
@@ -140,6 +143,7 @@
 			files = (
 				A8CCF9D1261228F0009EFF71 /* ContentView.swift in Sources */,
 				A8CCF9CF261228F0009EFF71 /* GolenovichAL_HW3_2App.swift in Sources */,
+				A8CCF9E526139DCC009EFF71 /* ColoredSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
