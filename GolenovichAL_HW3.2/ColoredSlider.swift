@@ -24,7 +24,7 @@ struct ColoredSlider: View {
             
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(minimumTrackTintColor)
-            
+    
             TextField("", text: $text,  onCommit: {
                 checkValueFromTextField()
             })
