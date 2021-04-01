@@ -10,11 +10,10 @@ import SwiftUI
 struct ColoredSlider: View {
     
     @Binding var value: Double
-    
-    @State private var text = ""
+
     @State private var alertPresented = false
-    
-    var minimumTrackTintColor: Color
+    @State private var text = ""
+    let minimumTrackTintColor: Color
     
     var body: some View {
         HStack {
@@ -24,18 +23,19 @@ struct ColoredSlider: View {
             
             Slider(value: $value, in: 0...255, step: 1)
                 .accentColor(minimumTrackTintColor)
-    
-            TextField("", text: $text,  onCommit: {
-                checkValueFromTextField()
-            })
-            .alert(isPresented: $alertPresented, content: {
-                Alert(title: Text("Wrong format!"), message: Text("Enter a value between 0 and 255"))
-            })
-            .frame(width: 45, alignment: .center)
-            .onReceive(text.publisher.collect()) {
-                self.text = String($0.prefix(3))
-            }
-            .textFieldStyle(RoundedBorderTextFieldStyle())
+                .onChange(of: value) { _ in
+                    text = "\(lround(value))"
+                }
+            
+            TextField("", text: $text,  onCommit: checkValueFromTextField)
+                .alert(isPresented: $alertPresented, content: {
+                    Alert(title: Text("Wrong format!"), message: Text("Enter a value between 0 and 255"))
+                })
+                .onAppear {
+                    text = "\(lround(value))"
+                }
+                .frame(width: 55, alignment: .trailing)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
         }
         .padding(.horizontal)
     }

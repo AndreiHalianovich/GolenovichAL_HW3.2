@@ -15,20 +15,15 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            Color(#colorLiteral(red: 0.1183417514, green: 0.3233708143, blue: 0.5748734474, alpha: 1))
-                .ignoresSafeArea()
+            Color(#colorLiteral(red: 0.1183417514, green: 0.3233708143, blue: 0.5748734474, alpha: 1)).ignoresSafeArea()
+            
             VStack(spacing: 50) {
-                Rectangle()
-                    .foregroundColor(Color(red: redColorValue / 255, green: greenColorValue / 255, blue: blueColorValue / 255))
-                    .frame(height: 150)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .overlay(RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.white, lineWidth: 3))
-                    .padding()
+                ColorView(red: redColorValue, green: greenColorValue, blue: blueColorValue)
+                
                 VStack (spacing: 15){
                     ColoredSlider(value: $redColorValue, minimumTrackTintColor: .red)
                     ColoredSlider(value: $greenColorValue, minimumTrackTintColor: .green)
-                    ColoredSlider(value: $blueColorValue,minimumTrackTintColor: .blue)
+                    ColoredSlider(value: $blueColorValue ,minimumTrackTintColor: .blue)
                 }
                 Spacer()
             }
